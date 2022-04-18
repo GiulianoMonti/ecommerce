@@ -22,7 +22,7 @@ const ListProductsController = () => {
 
   return (
     <div className="container">
-      <h2 className="text-center"> List Employees </h2>
+      <h2 className="text-center"> Products </h2>
       <table className="table table-bordered table-striped">
         <thead></thead>
         <tbody>
