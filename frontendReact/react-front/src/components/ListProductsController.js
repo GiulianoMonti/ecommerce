@@ -27,8 +27,7 @@ const ListProductsController = () => {
         <thead></thead>
         <tbody>
           {products.map((products) => (
-            <tr key={products.id}>
-              <td> {products.id} </td>
+            <tr key={products.sku}>
               <td> {products.sku} </td>
               <td>{products.name}</td>
               <td>{products.description}</td>
