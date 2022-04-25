@@ -7,14 +7,14 @@ import {
   Routes,
   Switch,
 } from "react-router-dom";
-import ListProductsController from "./components/ListProductsController";
+import ProductsController from "./components/ProductsController";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ListProductsController />}></Route>
+          <Route path="/" element={<ProductsController />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProductService from "../services/ProductService";
+import ProductsList from "./ProductsList";
 
-const ListProductsController = () => {
+const ProductsController = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,23 +24,9 @@ const ListProductsController = () => {
   return (
     <div className="container">
       <h2 className="text-center"> Products </h2>
-      <table className="table table-bordered table-striped">
-        <thead></thead>
-        <tbody>
-          {products.map((products) => (
-            <tr key={products.sku}>
-              <td> {products.sku} </td>
-              <td>{products.name}</td>
-              <td>{products.description}</td>
-              <td>{products.unitPrice}</td>
-              <td>{products.unitsInStock}</td>
-              {/* <td>{products.emailId}</td> */}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <ProductsList products={products} />
     </div>
   );
 };
 
-export default ListProductsController;
+export default ProductsController;
