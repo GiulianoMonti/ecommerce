@@ -24,9 +24,9 @@ export default function ProductsList({ products }) {
                   height="50"
                 />
               </td>
-              <td> {products.name} </td>
-              <td>{products.unitPrice}</td>
-              <td>{products.unitsInStock}</td>
+              <td className="align-middle"> {products.name} </td>
+              <td className="align-middle">{products.unitPrice}</td>
+              <td className="align-middle">{products.unitsInStock}</td>
             </tr>
           ))}
         </tbody>
