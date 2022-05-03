@@ -5,17 +5,22 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Switch,
 } from "react-router-dom";
-import ProductsController from "./components/ProductsController";
+import Navbar from "./components/Navbar";
+import SideBar from "./components/SideBar";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<ProductsController />}></Route>
-        </Routes>
+        <SideBar />
+        <div className="container">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

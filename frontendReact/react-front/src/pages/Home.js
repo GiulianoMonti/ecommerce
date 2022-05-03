@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import ProductService from "../services/ProductService";
-import ProductsList from "./ProductsList";
+import ProductsList from "../components/ProductsList";
+import SideBar from "../components/SideBar";
+import "./Home.css";
 
-const ProductsController = () => {
+const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,10 +24,8 @@ const ProductsController = () => {
 
   return (
     <div className="container">
-      <h2 className="text-center"> Products </h2>
       <ProductsList products={products} />
     </div>
   );
 };
-
-export default ProductsController;
+export default Home;
