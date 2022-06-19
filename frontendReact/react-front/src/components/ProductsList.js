@@ -1,7 +1,8 @@
 import React from "react";
 import "./ProductList.css";
+import SideBar from "./SideBar";
 
-export default function ProductsList({ products }) {
+export default function ProductsList({ products, id }) {
   return (
     <div className="products-list">
       {products.map((products) => (

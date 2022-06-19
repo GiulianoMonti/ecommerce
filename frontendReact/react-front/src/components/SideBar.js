@@ -1,7 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import "./SideBar.css";
 export default function SideBar() {
+  const { prodID } = useParams();
+
   return (
     <div className="sidebar">
       <div className="sidebar-content"></div>
@@ -11,12 +13,10 @@ export default function SideBar() {
         <nav className="links">
           <ul>
             <li>
-              <NavLink to="/">
-                <span>Books</span>
-              </NavLink>
+              <NavLink to={"1"}>c</NavLink>
             </li>
             <li>
-              <NavLink to="/">
+              <NavLink to={"2"}>
                 <span>Coofe mugs</span>
               </NavLink>
             </li>

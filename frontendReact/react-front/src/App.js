@@ -15,12 +15,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <SideBar />
-        <div className="container">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-          </Routes>
-        </div>
+        <Navbar />
+        <Routes>
+          <Route path="/:id" element={<Home />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/category/:id" element={<Home />}></Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );
